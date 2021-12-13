@@ -1,0 +1,9 @@
+<h1>Calculadora</h1>
+<app-calcular
+  (resultado)="pintarResultado($event)"
+  (mostrar)="resetear($event)"
+></app-calcular>
+<app-mostrar-resultado
+  [mostrarResuldado]="resultado"
+  [mostrar]="mostrar"
+></app-mostrar-resultado>
