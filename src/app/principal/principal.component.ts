@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import {
   Component,
   OnChanges,
@@ -19,10 +20,8 @@ export class PrincipalComponent implements OnInit {
   ngOnInit(): void {
     console.log('ngOnInit');
   }
-  // ngOnDestroy(): void {
-  //   console.log('ngOnDestroy');
-  // }
-  resultado: number = 0;
+
+  resultado!: number;
   pintarResultado(resultado: number) {
     this.resultado = resultado;
   }

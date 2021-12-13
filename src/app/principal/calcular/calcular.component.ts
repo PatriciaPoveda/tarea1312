@@ -1,13 +1,13 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-calcular',
   templateUrl: './calcular.component.html',
 })
 export class CalcularComponent {
-  numeroA: number = 0;
-  numeroB: number = 0;
-  // @Input() mostrar!: boolean;
+  numeroA!: number;
+  numeroB!: number;
+
   sumar() {
     const resultado = this.numeroA + this.numeroB;
     return this.resultado.emit(resultado);
@@ -29,7 +29,6 @@ export class CalcularComponent {
     this.numeroB = 0;
     this.resultado.emit(0);
     this.mostrar.emit(false);
-    console.log(this.mostrar, 'MOSTRARRRR');
   }
 
   @Output() resultado: EventEmitter<number> = new EventEmitter<number>();

@@ -3,7 +3,6 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   SimpleChanges,
 } from '@angular/core';
 
@@ -13,7 +12,7 @@ import {
 })
 export class MostrarResultadoComponent implements OnDestroy, OnChanges {
   @Input() mostrarResuldado!: number;
-  @Input() mostrar!: boolean;
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log('onChanges ', changes);
   }
